@@ -1,0 +1,14 @@
+{
+  "type": "mysql",
+  "host": "localhost",
+  "port": 3306,
+  "username": "gregorio",
+  "password": "secret123",
+  "database": "api_nest_test",
+  "entities": ["dist/**/*.entity{.ts,.js}"],
+  "migrations": ["migration/*.js"],
+  "synchronize": true,
+  "cli": {
+    "migrationsDir": "migration"
+  }
+}
