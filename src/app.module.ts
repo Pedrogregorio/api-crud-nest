@@ -7,6 +7,7 @@ import { Connection } from 'typeorm';
 import { PostsModule } from './posts/posts.module';
 import { Post } from './posts/entities/post.entity';
 import { AppController } from './app.controller';
+import { Verify } from './verify.presence';
 
 @Module({
   imports: [
@@ -28,7 +29,7 @@ import { AppController } from './app.controller';
     PostsModule,
   ],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [AppService, Verify],
 })
 export class AppModule {
   constructor(private connection: Connection) {}
