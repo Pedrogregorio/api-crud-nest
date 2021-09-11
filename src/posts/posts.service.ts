@@ -16,7 +16,7 @@ export class PostsService {
   }
 
   findAll() {
-    return this.postRespository.find();
+    return this.postRespository.find({ relations: ['user'] });
   }
 
   findOne(id: string) {
