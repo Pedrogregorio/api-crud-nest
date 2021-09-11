@@ -12,7 +12,7 @@ export class PostsService {
   ) {}
 
   async create(createPostDto: CreatePostDto): Promise<void> {
-    await this.postRespository.create(createPostDto);
+    await this.postRespository.insert(createPostDto);
   }
 
   findAll() {

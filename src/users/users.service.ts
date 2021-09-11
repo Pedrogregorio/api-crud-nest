@@ -14,7 +14,7 @@ export class UsersService {
   async create(createUserDto: CreateUserDto): Promise<void> {
     try {
       console.log(createUserDto);
-      await this.userRepository.create(createUserDto);
+      await this.userRepository.insert(createUserDto);
     } catch (error) {
       console.log(error);
     }
